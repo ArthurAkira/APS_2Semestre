@@ -76,7 +76,7 @@ def inserirDados(nCid, dTer, pop):
         nomeCidade.append(nCid)
         dimTerritorial.append(dTer)
         qtdPopulacao.append(pop)
-        input("|    DADOS INSERIDOS")
+        print("|    DADOS INSERIDOS")
         con = input("|    pressione enter para continuar")    
 
 def cidadeMaisExtensa():
