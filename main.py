@@ -12,7 +12,7 @@ def menu():
     while True:
         print()
         print("╭––––––––––––––––––––––––––––––––––––––––––––––––––––––––––╮")
-        print("|    APS             ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀    ⠀⠀⠀⠀⠀⠀⎯⠀⠀❐⠀⠀⤬")
+        print("|    Atividade Práticas Supervisionadas      ⠀⠀⠀⠀⠀⠀⎯⠀⠀❐⠀⠀⤬  ")
         print("┞––––––––––––––––––––––––––––––––––––––––––––––––––––––––––┦")
         print("|    selecione a funcao desejada:")
         print("|    1 - Inserir dados")
