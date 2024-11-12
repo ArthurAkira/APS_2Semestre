@@ -14,7 +14,7 @@ def menu():
         print("╭––––––––––––––––––––––––––––––––––––––––––––––––––––––––––╮")
         print("|    Atividade Práticas Supervisionadas      ⠀⠀⠀⠀⠀⠀⎯⠀⠀❐⠀⠀⤬  ")
         print("┞––––––––––––––––––––––––––––––––––––––––––––––––––––––––––┦")
-        print("|    selecione a funcao desejada:")
+        print("|    Selecione a funcao desejada:")
         print("|    1 - Inserir dados")
         print("|    2 - Cidade Mais Populosa")
         print("|    3 - Cidade Mais extensa")
@@ -24,9 +24,9 @@ def menu():
         print("|")
         print("|")
        
-        res = int(input("|    Digite o numero respectivo: "))
+        res = int(input("|    Digite o número respectivo: "))
         if(res < 1 or res > 6):
-            print("|    valor invalido")
+            print("|    Valor Inválido")
             menu()
 
         print("|")
@@ -53,7 +53,7 @@ def criaDados():
 
     for i in range(len(nomeCidade)):
         if(nCid == nomeCidade[i]):
-            print("|    cidade ja existente")
+            print("|    Cidade já existente")
             return
 
     dTer = int(input("|    dimensão territorial (em kms): "))
@@ -63,13 +63,13 @@ def criaDados():
 
 def inserirDados(nCid, dTer, pop):
     if nCid == "":
-        print("|    nao foi inserido um nome para cidade")
+        print("|    Não foi inserido um nome para cidade")
         return
     if dTer == "" or dTer <= 0:
-        print("|    nao foi inserido uma dimensao do territorio")
+        print("|    Não foi inserido uma dimensão do território")
         return
     if pop == "" or pop <= 0:
-        print("|    quantidade da populacao invalida")
+        print("|    Quantidade da população inválida")
         return
     
     if len(nomeCidade) < 100:
@@ -77,7 +77,7 @@ def inserirDados(nCid, dTer, pop):
         dimTerritorial.append(dTer)
         qtdPopulacao.append(pop)
         print("|    DADOS INSERIDOS")
-        con = input("|    pressione enter para continuar")    
+        con = input("|    Pressione enter para continuar")    
 
 def cidadeMaisExtensa():
     if not nomeCidade:
@@ -90,8 +90,8 @@ def cidadeMaisExtensa():
         if(maior < dimTerritorial[i]):
             maior = dimTerritorial[i]
             cidade = nomeCidade[i]
-    print(f'|    a cidade mais extensa tem o nome de {cidade} com a dimensao de {maior} kms')
-    con = input("|    pressione enter para continuar")
+    print(f'|    A cidade mais extensa tem o nome de {cidade} com a dimensão de {maior} kms')
+    con = input("|    Pressione enter para continuar")
 
 
 def cidadeMaisPopulosa():
@@ -105,8 +105,8 @@ def cidadeMaisPopulosa():
         if(maior < qtdPopulacao[i]):
             maior = qtdPopulacao[i]
             cidade = nomeCidade[i]
-    print(f'|    a cidade mais populosa tem o nome de {cidade} com a populacao de {maior} habitantes')
-    con = input("|    pressione enter para continuar")
+    print(f'|    A cidade mais populosa tem o nome de {cidade} com a população de {maior} habitantes')
+    con = input("|    Pressione enter para continuar")
 
 def mediaPopulacao():
     if not qtdPopulacao:
@@ -114,8 +114,8 @@ def mediaPopulacao():
         return
     
     media = sum(qtdPopulacao)/len(nomeCidade)  
-    print('|    A media das cidades é de ', media)
-    con = input("|    pressione enter para continuar")
+    print('|    A média das cidades é de ', media)
+    con = input("|    Pressione enter para continuar")
 
 def lerDados():
     cidade = ""
@@ -123,7 +123,7 @@ def lerDados():
     tamanhoTer = 0
     print("|    Seleciona uma opção: ")
     print("|    1 - Ler todos os dados")
-    print("|    2 - Ler um dado es especifico") 
+    print("|    2 - Ler um dado específico") 
     res = int(input("|    Resposta: "))
     print("┞––––––––––––––––––––––––––––––––––––––––––––––––––––––––––┦   ")
     match res:
@@ -132,9 +132,9 @@ def lerDados():
                 cidade = nomeCidade[i]
                 populacao = qtdPopulacao[i]
                 tamanhoTer = dimTerritorial[i]
-                print(f'|    nome: {cidade}  \n|    populacao: {populacao} \n|    dimensão territorial: {tamanhoTer}')
+                print(f'|    nome: {cidade}  \n|    população: {populacao} \n|    dimensão territorial: {tamanhoTer}')
                 print("┞––––––––––––––––––––––––––––––––––––––––––––––––––––––––––┦   ")
-            con = input("|    pressione enter para continuar")
+            con = input("|    Pressione enter para continuar")
 
             return   
         case 2:
@@ -143,8 +143,8 @@ def lerDados():
                 if(cidade == nomeCidade[i]):
                     populacao = qtdPopulacao[i]
                     tamanhoTer = dimTerritorial[i]
-                    print(f'|    nome: {cidade}  \n|    populacao: {populacao} \n|    dimensão territorial: {tamanhoTer}')
-                    con = input("|    pressione enter para continuar")
+                    print(f'|    nome: {cidade}  \n|    população: {populacao} \n|    dimensão territorial: {tamanhoTer}')
+                    con = input("|    Pressione enter para continuar")
                     return
             print("|    Cidade não encontrada")
 
