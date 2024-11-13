@@ -12,13 +12,13 @@ def menu():
     while True:
         print()
         print("╭––––––––––––––––––––––––––––––––––––––––––––––––––––––––––╮")
-        print("|    Atividade Práticas Supervisionadas      ⠀⠀⠀⠀⠀⠀⎯⠀⠀❐⠀⠀⤬  ")
+        print("|    Atividades Práticas Supervisionadas      ⠀⠀⠀⠀⠀⠀⎯⠀⠀❐⠀⠀⤬  ")
         print("┞––––––––––––––––––––––––––––––––––––––––––––––––––––––––––┦")
-        print("|    Selecione a funcao desejada:")
-        print("|    1 - Inserir dados")
+        print("|    Selecione a função desejada:")
+        print("|    1 - Inserir Dados")
         print("|    2 - Cidade Mais Populosa")
         print("|    3 - Cidade Mais extensa")
-        print("|    4 - Media População")
+        print("|    4 - Média População")
         print("|    5 - Ler Dados")   
         print("|    6 - fechar programa")   
         print("|")
@@ -44,20 +44,20 @@ def menu():
             case 5:
                 lerDados()
             case 6:
-                print("|    programa fechado")
+                print("|    Programa Fechado")
                 print("╰––––––––––––––––––––––––––––––––––––––––––––––––––––––––––╯")
                 quit()
 
 def criaDados():
-    nCid = str(input("|    nome da cidade: "))
+    nCid = str(input("|    Nome da cidade: "))
 
     for i in range(len(nomeCidade)):
         if(nCid == nomeCidade[i]):
             print("|    Cidade já existente")
             return
 
-    dTer = int(input("|    dimensão territorial (em kms): "))
-    pop = int(input("|    população: "))
+    dTer = int(input("|    Dimensão territorial (em km²): "))
+    pop = int(input("|    População: "))
     inserirDados(nCid,dTer,pop)
 
 
